@@ -1,0 +1,18 @@
+<section class="container">
+  <h2>Liczba kursów: {{liczbaKursow}}</h2>
+  <ol>
+    <li *ngFor="let item of kursy">{{item}}</li>
+  </ol>
+  <div class="form p-2">
+    <div class="form-group">
+      <label>Imię i nazwisko:</label><br>
+      <input type="text" [(ngModel)]="imie" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Numer kursu:</label>
+      <input type="number" [(ngModel)]="nr_kursu" class="form-control">
+    </div>
+    <button (click)="zapisz()" class="btn btn-primary my-2">Zapisz się do kursu</button>
+
+  </div>
+</section>
